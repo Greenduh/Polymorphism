@@ -8,10 +8,15 @@ public class Main {
                 new Square(6)
         };
 
+        double totalArea = calculateTotalArea(shapes);
+        System.out.printf("Площа всіх фігур: %.2f\n", totalArea);
+    }
+
+    public static double calculateTotalArea(Shape[] shapes) {
         double totalArea = 0;
         for (Shape shape : shapes) {
             totalArea += shape.getArea();
         }
-        System.out.printf("Площа всіх фігур: %.2f\n", totalArea);
+        return totalArea;
     }
 }
